@@ -1,0 +1,31 @@
+{
+  "name": "@channel.io/stylelint-config",
+  "version": "1.0.0",
+  "description": "Configuration for stylelint by Channel",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Channel.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/channel-io/stylelint-config/issues"
+  },
+  "homepage": "https://github.com/channel-io/stylelint-config",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "channelio"
+  ],
+  "dependencies": {
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.0.0"
+  }
+}
