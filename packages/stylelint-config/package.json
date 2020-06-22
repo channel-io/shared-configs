@@ -1,6 +1,6 @@
 {
   "name": "@channel.io/stylelint-config",
-  "version": "1.1",
+  "version": "1.1.0",
   "description": "Configuration for stylelint by Channel",
   "main": "index.js",
   "files": [
