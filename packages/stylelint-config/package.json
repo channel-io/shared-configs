@@ -26,6 +26,7 @@
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.0.0",
+    "stylelint-processor-styled-components": "^1.10.0"
   }
 }
