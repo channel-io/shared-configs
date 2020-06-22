@@ -9,6 +9,7 @@ module.exports = {
   "syntax": "scss",
   "rules": {
       "selector-type-case": null,
+      "value-keyword-case": null,
       "comment-empty-line-before": null,
       "declaration-empty-line-before": null,
       "selector-type-no-unknown": [true, {
