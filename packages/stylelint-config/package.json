@@ -1,16 +1,25 @@
 {
   "name": "@channel.io/stylelint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Configuration for stylelint by Channel",
   "main": "index.js",
   "files": [
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "stylelint --config index.js src/**/*.{js,ts,scss}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "author": "Channel.io",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/channel-io/stylelint-config"
+  },
   "bugs": {
     "url": "https://github.com/channel-io/stylelint-config/issues"
   },
@@ -21,12 +30,18 @@
     "channelio"
   ],
   "dependencies": {
+    "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.0.0",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "stylelint": ">=13.0.0",
+    "stylelint-processor-styled-components": ">=1.10.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "styled-components": "^5.1.1",
+    "stylelint": "^13.6.1"
   }
 }
