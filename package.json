@@ -1,0 +1,13 @@
+{
+  "name": "web-configs",
+  "author": "Channel.io",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "packageManager": "yarn@4.0.2"
+}
