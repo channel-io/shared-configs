@@ -706,6 +706,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@channel.io/prettier-config@workspace:packages/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@channel.io/prettier-config@workspace:packages/prettier-config"
+  languageName: unknown
+  linkType: soft
+
 "@channel.io/stylelint-config@workspace:packages/stylelint-config":
   version: 0.0.0-use.local
   resolution: "@channel.io/stylelint-config@workspace:packages/stylelint-config"
@@ -5734,6 +5740,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "prettier@npm:3.2.4"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 88dfeb78ac6096522c9a5b81f1413d875f568420d9bb6a5e5103527912519b993f2bcdcac311fcff5718d5869671d44e4f85827d3626f3a6ce32b9abc65d88e0
+  languageName: node
+  linkType: hard
+
 "pretty-format@npm:^29.7.0":
   version: 29.7.0
   resolution: "pretty-format@npm:29.7.0"
@@ -7226,6 +7241,7 @@ __metadata:
   resolution: "web-configs@workspace:."
   dependencies:
     "@changesets/cli": "npm:^2.27.1"
+    prettier: "npm:^3.2.4"
   languageName: unknown
   linkType: soft
 
