@@ -2,7 +2,6 @@
   "name": "web-configs",
   "author": "Channel.io",
   "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -13,7 +12,8 @@
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "prettier": "^3.2.4"
+    "prettier": "^3.2.4",
+    "yalc": "^1.0.0-pre.53"
   },
   "prettier": "@channel.io/prettier-config"
 }
