@@ -2,6 +2,7 @@
   "name": "web-configs",
   "author": "Channel.io",
   "license": "MIT",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
