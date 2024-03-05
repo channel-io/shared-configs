@@ -16,6 +16,7 @@
     "default.js",
     "node.js",
     "web.js",
+    "next.js",
     "rules"
   ],
   "homepage": "https://github.com/channel-io/eslint-config",
