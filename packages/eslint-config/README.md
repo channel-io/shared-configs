@@ -4,9 +4,19 @@ An eslint configuration for channel web projects.
 
 ## Installation
 
-`$ npm install --dev @channel.io/eslint-config`
+### npm
 
-### Supports
+```
+$ npm install --dev @channel.io/eslint-config
+```
+
+### Yarn
+
+```
+$ yarn add --dev @channel.io/eslint-config
+```
+
+## Supports
 
 This config supports `Next`, `Web(React)`, `Node`
 
@@ -27,7 +37,7 @@ For Node Projects
 
 ```json
 {
-  "extends": "@channel.io/eslint-config/web"
+  "extends": "@channel.io/eslint-config/node"
 }
 ```
 
@@ -35,19 +45,11 @@ For Next
 
 ```json
 {
-  "extends": "@channel.io/eslint-config/web"
+  "extends": "@channel.io/eslint-config/next"
 }
 ```
 
-For Next
-
-```json
-{
-  "extends": "@channel.io/eslint-config/web"
-}
-```
-
-### Code Formatting
+## Code Formatting
 
 From ESLint 8.53.0, [formatting-related features are being deprecated gradually](https://eslint.org/blog/2023/10/deprecating-formatting-rules/). It is assumed that you are using Prettier for formatting in conjunction with this configuration.
 
