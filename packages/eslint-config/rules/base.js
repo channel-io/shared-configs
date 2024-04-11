@@ -64,7 +64,10 @@ module.exports = {
     'no-unneeded-ternary': 'warn',
     'no-unreachable': 'warn',
     'no-unsafe-negation': 'warn',
-    'no-unused-expressions': ['warn', { allowShortCircuit: true, enforceForJSX: true }],
+    'no-unused-expressions': [
+      'warn',
+      { allowShortCircuit: true, enforceForJSX: true },
+    ],
     'no-unused-labels': 'warn',
     'no-unused-vars': [
       'warn',
@@ -85,11 +88,18 @@ module.exports = {
     'no-var': 'warn',
     'no-void': 'warn',
     'no-with': 'error',
-    'object-shorthand': ['error', 'always', {
-      ignoreConstructors: false,
-      avoidQuotes: true,
-    }],
-    'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
+    'object-shorthand': [
+      'error',
+      'always',
+      {
+        ignoreConstructors: false,
+        avoidQuotes: true,
+      },
+    ],
+    'prefer-const': [
+      'warn',
+      { destructuring: 'all', ignoreReadBeforeAssign: true },
+    ],
     'prefer-promise-reject-errors': 'warn',
     'prefer-rest-params': 'warn',
     'prefer-spread': 'warn',
@@ -97,9 +107,25 @@ module.exports = {
     'use-isnan': 'error',
     'valid-typeof': 'error',
     yoda: ['warn', 'never', { exceptRange: true }],
-  
-    'import/extensions': ['error', 'ignorePackages', { js: 'never', mjs: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
-    'import/order': ['error', { groups: ['external', 'builtin', 'internal', 'parent', 'sibling', 'index'] }],
-  }
 
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      { js: 'never', mjs: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'external',
+          'builtin',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+      },
+    ],
+    'import/no-duplicates': 'error',
+  },
 }
