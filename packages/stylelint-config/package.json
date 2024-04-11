@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/stylelint-config/README.md",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/stylelint-config",
   "keywords": [
     "stylelint",
     "stylelint-config",

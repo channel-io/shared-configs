@@ -19,7 +19,7 @@
     "next.js",
     "rules"
   ],
-  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/eslint-config/README.md",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/eslint-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/channel-io/shared-configs.git"
