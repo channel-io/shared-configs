@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/channel-io/stylelint-config"
+    "url": "https://github.com/channel-io/shared-configs"
   },
   "bugs": {
-    "url": "https://github.com/channel-io/stylelint-config/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/stylelint-config",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/stylelint-config/README.md",
   "keywords": [
     "stylelint",
     "stylelint-config",

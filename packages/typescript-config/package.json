@@ -4,12 +4,12 @@
   "description": "Typescript configuration for Channel.io",
   "author": "Channel Corp.",
   "bugs": {
-    "url": "https://github.com/channel-io/shared-config/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/shared-config",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/typescript-config/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/channel-io/shared-config.git"
+    "url": "git+https://github.com/channel-io/shared-configs.git"
   },
   "keywords": [
     "typescript",
