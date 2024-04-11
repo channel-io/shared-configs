@@ -9,7 +9,7 @@
   },
   "author": "Channel Corp.",
   "bugs": {
-    "url": "https://github.com/channel-io/eslint-config/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
   "files": [
     "README.md",
@@ -19,10 +19,10 @@
     "next.js",
     "rules"
   ],
-  "homepage": "https://github.com/channel-io/eslint-config",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/eslint-config",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/channel-io/eslint-config.git"
+    "url": "git+https://github.com/channel-io/shared-configs.git"
   },
   "keywords": [
     "react",

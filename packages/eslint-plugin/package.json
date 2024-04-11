@@ -8,12 +8,12 @@
     "test": "jest"
   },
   "bugs": {
-    "url": "https://github.com/channel-io/eslint-plugin/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/eslint-plugin",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/eslint-plugin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/channel-io/eslint-plugin.git"
+    "url": "git+https://github.com/channel-io/shared-configs.git"
   },
   "keywords": [
     "react",
