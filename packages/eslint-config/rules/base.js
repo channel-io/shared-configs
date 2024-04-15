@@ -113,6 +113,8 @@ module.exports = {
       'ignorePackages',
       { js: 'never', mjs: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
     ],
+    'no-restricted-imports': ['error', { paths: ['src'], patterns: ['../*'] }],
+    'no-restricted-modules': ['error', { paths: ['src'], patterns: ['../*'] }],
     'import/order': [
       'error',
       {
