@@ -15,5 +15,6 @@
     "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.4"
   },
-  "prettier": "@channel.io/prettier-config"
+  "prettier": "@channel.io/prettier-config",
+  "version": "4.0.2"
 }
