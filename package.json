@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier './**/*.{md,json,yml}' --check"
+    "prettier": "prettier './**/*.{md,json,yml}' --check",
+    "version-packages": "changeset version && yarn --mode=\"update-lockfile\""
   },
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
