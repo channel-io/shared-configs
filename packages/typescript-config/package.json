@@ -1,7 +1,7 @@
 {
   "name": "@channel.io/typescript-config",
   "version": "0.0.1",
-  "description": "Typescript configuration for Channel.io",
+  "description": "Base TypeScript configuration for Channel.io",
   "author": "Channel Corp.",
   "bugs": {
     "url": "https://github.com/channel-io/shared-configs/issues"
