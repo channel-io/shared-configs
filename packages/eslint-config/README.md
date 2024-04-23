@@ -1,18 +1,18 @@
-# eslint-config
+# `@channel.io/eslint-config`
 
-An eslint configuration for channel web projects.
+ESLint configuration for Channel.io web projects
 
 ## Installation
 
 ### npm
 
-```
+```sh
 $ npm install --dev @channel.io/eslint-config
 ```
 
 ### Yarn
 
-```
+```sh
 $ yarn add --dev @channel.io/eslint-config
 ```
 

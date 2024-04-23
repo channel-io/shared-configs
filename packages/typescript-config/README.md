@@ -1,10 +1,18 @@
-# typescript-config
+# `@channel.io/typescript-config`
 
-Base typescript configuration for Channel.io
+Base TypeScript configuration for Channel.io
 
 ## Installation
 
-```bash
+### npm
+
+```sh
+$ npm install --dev @channel.io/typescript-config
+```
+
+### Yarn
+
+```sh
 $ yarn add --dev @channel.io/typescript-config
 ```
 

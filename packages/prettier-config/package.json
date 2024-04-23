@@ -2,7 +2,7 @@
   "name": "@channel.io/prettier-config",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Shared prettier configuration",
+  "description": "Shared Prettier configuration",
   "main": "index.json",
   "sideEffects": false,
   "author": "Channel Corp.",

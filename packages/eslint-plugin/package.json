@@ -1,7 +1,7 @@
 {
   "name": "@channel.io/eslint-plugin",
   "version": "1.2.3",
-  "description": "eslint plugin for channel.io web",
+  "description": "ESLint plugins for Channel.io web projects",
   "author": "Channel Corp.",
   "main": "index.js",
   "scripts": {
