@@ -1,10 +1,18 @@
 # `@channel-io/prettier-config`
 
-Shared prettier configuration
+Shared Prettier configuration
 
 ## Installation
 
-```bash
+### npm
+
+```sh
+$ npm install --dev @channel.io/prettier-config
+```
+
+### Yarn
+
+```sh
 $ yarn add --dev @channel.io/prettier-config
 ```
 
