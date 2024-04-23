@@ -1,20 +1,35 @@
-# eslint-plugin
+# `@channel.io/eslint-plugin`
+
+ESLint plugins for Channel.io web projects
 
 ## Installation
-1. `$ npm install --dev @channel.io/eslint-plugin`
 
-2. Edit `.eslintrc.js`
+### npm
 
-    ```js
-    module.exports = {
-      // ...
-      plugins: ['@channel.io'],
-      rules: {
-        '@channel.io/no-classnames-with-one-argument': 'error',
-        '@channel.io/hooks-deps-element-newline': 'warn'
-      }
-    }
-    ```
+```sh
+$ npm install --dev @channel.io/eslint-plugin
+```
+
+### Yarn
+
+```sh
+$ yarn add --dev @channel.io/eslint-plugin
+```
+
+## Usage
+
+Edit `.eslintrc.js`
+
+```js
+module.exports = {
+  // ...
+  plugins: ['@channel.io'],
+  rules: {
+    '@channel.io/no-classnames-with-one-argument': 'error',
+    '@channel.io/hooks-deps-element-newline': 'warn'
+  }
+}
+```
 
 ## Docs
 > Documents are written by Korean only.
