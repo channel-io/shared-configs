@@ -1,24 +1,41 @@
-# stylelint-config
+# `@channel.io/stylelint-config`
 
-An Configuration for stylelint by Channel.
+Configuration for Stylelint by Channel.io
 
 ## Installation
-`$ npm install --dev @channel.io/stylelint-config`
+
+### npm
+
+```sh
+$ npm install --dev @channel.io/stylelint-config
+```
+
+### Yarn
+
+```sh
+$ yarn add --dev @channel.io/stylelint-config
+```
 
 ## Install Packages
+
 Get peer dependency lists and install them.
 
-`$ npm info @channel.io/stylelint-config peerDependencies `
+```sh
+$ npm info @channel.io/stylelint-config peerDependencies
+```
 
 Or install with `install-peerdeps`.
 
-`$ npx install-peerdeps --dev @channel.io/stylelint-config`
+```sh
+$ npx install-peerdeps --dev @channel.io/stylelint-config
+```
 
-### Configure
-create `.stylelintrc` file and extend this library.
+## Configure
+
+Create `.stylelintrc` file and extend this library.
+
 ```js
 {
   "extends": ["@channel-io/stylelint-config"],
 }
-
 ```
