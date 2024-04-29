@@ -69,16 +69,7 @@ module.exports = {
       { allowShortCircuit: true, enforceForJSX: true },
     ],
     'no-unused-labels': 'warn',
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        args: 'none',
-        ignoreRestSiblings: true,
-        caughtErrors: 'all',
-        caughtErrorsIgnorePattern: '^_',
-      },
-    ],
+    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'no-useless-computed-key': 'warn',
     'no-useless-concat': 'warn',
     'no-useless-constructor': 'warn',
