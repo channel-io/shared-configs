@@ -30,18 +30,17 @@
     "channelio"
   ],
   "dependencies": {
-    "stylelint-config-recess-order": "^2.0.4",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "postcss-styled-syntax": "^0.6.4",
+    "stylelint-config-clean-order": "^5.4.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
   },
   "peerDependencies": {
-    "stylelint": ">=13.0.0",
-    "stylelint-processor-styled-components": ">=1.10.0"
+    "stylelint": ">=16.3.0"
   },
   "devDependencies": {
     "husky": "^4.2.5",
     "styled-components": "^5.1.1",
-    "stylelint": "^13.6.1"
+    "stylelint": "^16.3.0"
   }
 }
