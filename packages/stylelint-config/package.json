@@ -1,7 +1,7 @@
 {
   "name": "@channel.io/stylelint-config",
   "version": "1.2.0",
-  "description": "Configuration for stylelint by Channel",
+  "description": "Configuration for Stylelint by Channel.io",
   "main": "index.js",
   "files": [
     "index.js"
@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/channel-io/stylelint-config"
+    "url": "https://github.com/channel-io/shared-configs"
   },
   "bugs": {
-    "url": "https://github.com/channel-io/stylelint-config/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/stylelint-config",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/stylelint-config",
   "keywords": [
     "stylelint",
     "stylelint-config",

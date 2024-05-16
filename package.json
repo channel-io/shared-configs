@@ -7,10 +7,16 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier './**/*.{md,json,yml}' --check",
+    "version-packages": "changeset version && yarn --mode=\"update-lockfile\"",
+    "release": "changeset publish"
   },
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1"
-  }
+    "@changesets/cli": "^2.27.1",
+    "prettier": "^3.2.4"
+  },
+  "prettier": "@channel.io/prettier-config",
+  "version": "4.0.2"
 }

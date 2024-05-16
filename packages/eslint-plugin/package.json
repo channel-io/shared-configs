@@ -1,19 +1,19 @@
 {
   "name": "@channel.io/eslint-plugin",
   "version": "1.2.3",
-  "description": "eslint plugin for channel.io web",
+  "description": "ESLint plugins for Channel.io web projects",
   "author": "Channel Corp.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "bugs": {
-    "url": "https://github.com/channel-io/eslint-plugin/issues"
+    "url": "https://github.com/channel-io/shared-configs/issues"
   },
-  "homepage": "https://github.com/channel-io/eslint-plugin",
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/eslint-plugin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/channel-io/eslint-plugin.git"
+    "url": "git+https://github.com/channel-io/shared-configs.git"
   },
   "keywords": [
     "react",

@@ -1,0 +1,18 @@
+{
+  "name": "@channel.io/prettier-config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Shared Prettier configuration",
+  "main": "index.json",
+  "sideEffects": false,
+  "author": "Channel Corp.",
+  "bugs": {
+    "url": "https://github.com/channel-io/shared-configs/issues"
+  },
+  "homepage": "https://github.com/channel-io/shared-configs/tree/main/packages/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/channel-io/shared-configs.git",
+    "directory": "packages/prettier-config"
+  }
+}
