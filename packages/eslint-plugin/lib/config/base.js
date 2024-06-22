@@ -120,5 +120,6 @@ module.exports = {
       },
     ],
     'import/no-duplicates': 'error',
+    'curly': ['error', 'all']
   },
 }
