@@ -1,5 +1,11 @@
 # @channel.io/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- 02559a2: add curly rule
+
 ## 2.0.7
 
 ### Patch Changes
