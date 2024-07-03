@@ -29,6 +29,10 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.tsx'] },
     ],
     'react/jsx-no-constructed-context-values': 'error',
+    'react/jsx-curly-brace-presence': [
+      'error',
+      { props: 'never', children: 'never' },
+    ],
     'react/no-find-dom-node': 'warn',
     'react/self-closing-comp': 'error',
     'react-hooks/exhaustive-deps': 'error',
