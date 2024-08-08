@@ -1,5 +1,17 @@
 # @channel.io/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- 02559a2: add curly rule
+
+### Patch Changes
+
+- 22bd403: Add react/jsx-curly-brace-presence
+- dbbdb69: move rules to config
+- c47d45c: Bump typescript eslint to 8.0.1
+
 ## 2.0.7
 
 ### Patch Changes
