@@ -14,6 +14,7 @@ module.exports = {
     'pascal-case-enum-name': pascalCaseEnumName,
     'pascal-case-interface-name': pascalCaseInterfaceName,
     'pascal-case-type-name': pascalCaseTypeName,
-    'prevent-destructured-argument-callback-in-intersection-observer': preventDestructuredArgumentCallbackInIntersectionObserver,
+    'prevent-destructured-argument-callback-in-intersection-observer':
+      preventDestructuredArgumentCallbackInIntersectionObserver,
   },
 }

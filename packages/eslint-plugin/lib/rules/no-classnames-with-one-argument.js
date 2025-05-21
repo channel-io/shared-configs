@@ -21,14 +21,23 @@ module.exports = {
         }
 
         const { callee, arguments: args } = node
-        if (callee.name === classNameImportName && args.length === 1 && args[0].type !== 'ObjectExpression') {
+        if (
+          callee.name === classNameImportName &&
+          args.length === 1 &&
+          args[0].type !== 'ObjectExpression'
+        ) {
           context.report({
             node,
             message: 'Do not call classnames with only one argument.',
-            fix: fixer => {
+            fix: (fixer) => {
               const callExpressionText = context.getSourceCode().getText(node)
-              const methodRegExp = new RegExp(`^${classNameImportName}\\((.+)\\)`)
-              return fixer.replaceText(node, callExpressionText.replace(methodRegExp, '$1'))
+              const methodRegExp = new RegExp(
+                `^${classNameImportName}\\((.+)\\)`
+              )
+              return fixer.replaceText(
+                node,
+                callExpressionText.replace(methodRegExp, '$1')
+              )
             },
           })
         }

@@ -26,35 +26,47 @@ ruleTester.run('no-translate-with-template-literal', rule, {
         const translated1 = i18n(TRANSLATE_KEY)
         const translated2 = t(TRANSLATE_KEY)
       `,
-      options: [{ translateFuncNames: ['t', 'i18n'] }]
+      options: [{ translateFuncNames: ['t', 'i18n'] }],
     },
   ],
   invalid: [
     {
       code: 'translate(`my.foo.${first}`)',
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
     {
       code: 'translate(`my.foo.${second}.${third}`)',
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
     {
       code: 'translate(`my.foo.${second}.${third}.fourth`)',
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
     {
       code: 'translate(`my.foo.${second}.${third}.fourth` as string)',
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
     {
       code: 'translate(`my.foo.${second}.${third}.fourth` as const)',
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
     {
       code: `
         someItems.map((item) => ${'translate(`my.foo.${item.type}`)'})
       `,
-      errors: [{ message: 'Do not call translation method with template literal.' }],
+      errors: [
+        { message: 'Do not call translation method with template literal.' },
+      ],
     },
   ],
 })

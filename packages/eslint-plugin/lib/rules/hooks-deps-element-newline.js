@@ -24,12 +24,18 @@ module.exports = {
         }
         const deps = args[args.length - 1]
         if (deps.type === 'ArrayExpression') {
-          if (deps.elements.length <= 1 && deps.loc.start.line !== deps.loc.end.line) {
+          if (
+            deps.elements.length <= 1 &&
+            deps.loc.start.line !== deps.loc.end.line
+          ) {
             context.report({
               node: deps,
               message: 'There should be no linebreak here.',
-              fix: fixer => {
-                const dep = deps.elements.length === 0 ? '' : context.getSourceCode().getText(deps.elements[0])
+              fix: (fixer) => {
+                const dep =
+                  deps.elements.length === 0
+                    ? ''
+                    : context.getSourceCode().getText(deps.elements[0])
                 return fixer.replaceText(deps, `[${dep}]`)
               },
             })
@@ -39,7 +45,7 @@ module.exports = {
               context.report({
                 node: deps,
                 message: 'There should be a linebreak after this element.',
-                fix: fixer => fixer.insertTextBefore(deps.elements[0], '\n'),
+                fix: (fixer) => fixer.insertTextBefore(deps.elements[0], '\n'),
               })
             }
 
@@ -55,7 +61,7 @@ module.exports = {
                 context.report({
                   node: prev,
                   message: 'There should be a linebreak after this element.',
-                  fix: fixer => fixer.insertTextBefore(ele, '\n'),
+                  fix: (fixer) => fixer.insertTextBefore(ele, '\n'),
                 })
               }
             })
@@ -66,12 +72,12 @@ module.exports = {
               context.report({
                 node: last,
                 message: 'There should be a linebreak after this element.',
-                fix: fixer => fixer.insertTextAfter(last, ',\n'),
+                fix: (fixer) => fixer.insertTextAfter(last, ',\n'),
               })
             }
           }
         }
-      }
+      },
     }
-  }
+  },
 }

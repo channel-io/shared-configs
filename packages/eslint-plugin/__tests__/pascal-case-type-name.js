@@ -30,7 +30,7 @@ ruleTester.run('pascal-case-type-name', rule, {
       output: `
         type FooType = string | number
       `,
-      errors: [{ message: 'Type\'s first charactor must be upper case.' }],
+      errors: [{ message: "Type's first charactor must be upper case." }],
     },
-  ]
+  ],
 })

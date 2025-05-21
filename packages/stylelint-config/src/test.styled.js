@@ -1,11 +1,11 @@
 /* External dependencies */
 import styled from 'styled-components'
 
-let dummyValue;
+let dummyValue
 
 const StyledWrapper = styled.div`
   position: ${dummyvalue};
-  top: ${props => props.top};
+  top: ${(props) => props.top};
   bottom: ${dummyValue};
   left: ${dummyValue};
   z-index: ${dummyValue};
