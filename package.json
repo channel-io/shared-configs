@@ -14,8 +14,8 @@
   },
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "prettier": "^3.2.4"
+    "@changesets/cli": "^2.29.4",
+    "prettier": "^3.5.3"
   },
   "prettier": "@channel.io/prettier-config",
   "version": "4.0.2"
