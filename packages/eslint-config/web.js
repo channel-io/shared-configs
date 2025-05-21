@@ -6,8 +6,6 @@ module.exports = {
     './rules/prettier.js',
   ],
   env: { browser: true },
-  globals: {
-    window: true,
-    fetch: true,
-  },
-};
+  globals: { window: true, fetch: true },
+  rules: { curly: ['error', 'all'] },
+}
