@@ -1,10 +1,13 @@
 # no-classnames-with-one-argument
+
 > Detect useless call classnames
 
 ## Concept
+
 - 인자가 1개인 classname 라이브러리의 default export function를 사용할 필요가 없습니다.
 
 ## Logic
+
 1. ImportDeclaration 에서 source가 `classnames`인 import를 찾아냅니다. (`from 'classnames'`)
 1. 해당 import 구문에서 import되는 specifiers를 확인해 변수에 집어넣습니다.
 1. 해당 specifiers로 호출되는 CallExpression를 발견한다면

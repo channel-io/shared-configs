@@ -33,14 +33,14 @@
     "postcss-styled-syntax": "^0.6.4",
     "stylelint-config-clean-order": "^5.4.2",
     "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-standard-scss": "^13.0.0"
+    "stylelint-config-standard-scss": "^13.1.0"
   },
   "peerDependencies": {
     "stylelint": ">=16.3.0"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "styled-components": "^5.1.1",
-    "stylelint": "^16.3.0"
+    "husky": "^4.3.8",
+    "styled-components": "^5.3.11",
+    "stylelint": "^16.19.1"
   }
 }

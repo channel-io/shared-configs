@@ -62,5 +62,5 @@ ruleTester.run('no-classnames-with-one-argument', rule, {
       `,
       errors: [{ message: 'Do not call classnames with only one argument.' }],
     },
-  ]
+  ],
 })

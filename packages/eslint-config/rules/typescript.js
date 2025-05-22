@@ -26,7 +26,8 @@ module.exports = {
         '@typescript-eslint/no-redeclare': 'warn',
 
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': [
+        '@typescript-eslint/no-unused-vars': 'off',
+        'unused-imports/no-unused-vars': [
           'warn',
           {
             vars: 'all',
@@ -35,6 +36,7 @@ module.exports = {
             caughtErrors: 'all',
           },
         ],
+        'unused-imports/no-unused-imports': 'error',
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
         'no-undef': 'off',
@@ -44,9 +46,7 @@ module.exports = {
         'import/parsers': {
           '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
         },
-        'import/resolver': {
-          typescript: {},
-        },
+        'import/resolver': { typescript: {} },
       },
     },
   ],

@@ -22,7 +22,7 @@ ruleTester.run('pascal-case-interface-name', rule, {
       output: `
         interface Foo {}
       `,
-      errors: [{ message: 'Interface\'s first charactor must be upper case.' }],
+      errors: [{ message: "Interface's first charactor must be upper case." }],
     },
     {
       code: `
@@ -31,7 +31,7 @@ ruleTester.run('pascal-case-interface-name', rule, {
       output: `
         interface FooBar {}
       `,
-      errors: [{ message: 'Interface\'s first charactor must be upper case.' }],
+      errors: [{ message: "Interface's first charactor must be upper case." }],
     },
     {
       code: `
@@ -40,7 +40,7 @@ ruleTester.run('pascal-case-interface-name', rule, {
       output: `
         interface FooBar {}
       `,
-      errors: [{ message: 'There should be no \'I\' prefix.' }],
+      errors: [{ message: "There should be no 'I' prefix." }],
     },
-  ]
+  ],
 })

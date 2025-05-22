@@ -5,7 +5,7 @@ module.exports = {
     ecmaFeatures: { impliedStrict: true, jsx: true },
   },
   env: { es2022: true, jest: true },
-  plugins: ['import'],
+  plugins: ['import', 'unused-imports'],
   rules: {
     'constructor-super': 'warn',
     eqeqeq: ['error', 'smart'],
@@ -82,10 +82,7 @@ module.exports = {
     'object-shorthand': [
       'error',
       'always',
-      {
-        ignoreConstructors: false,
-        avoidQuotes: true,
-      },
+      { ignoreConstructors: false, avoidQuotes: true },
     ],
     'prefer-const': [
       'warn',
@@ -120,6 +117,6 @@ module.exports = {
       },
     ],
     'import/no-duplicates': 'error',
-    'curly': ['error', 'all']
+    curly: ['error', 'all'],
   },
 }

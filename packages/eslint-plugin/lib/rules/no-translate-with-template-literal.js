@@ -12,7 +12,7 @@ module.exports = {
             },
           },
         },
-      }
+      },
     ],
     docs: {
       description: 'Do not call translation method with template literal',
@@ -21,20 +21,22 @@ module.exports = {
   },
   create(context) {
     const sourceCode = context.getSourceCode()
-    const translateFuncNames = context.options[0]?.translateFuncNames || ['translate']
+    const translateFuncNames = context.options[0]?.translateFuncNames || [
+      'translate',
+    ]
     return {
       CallExpression(node) {
         const { callee } = node
         if (
           translateFuncNames.includes(callee.name) &&
-          sourceCode.getTokens(node).some(token => token.type === 'Template')
+          sourceCode.getTokens(node).some((token) => token.type === 'Template')
         ) {
           context.report({
             node,
             message: 'Do not call translation method with template literal.',
           })
         }
-      }
+      },
     }
   },
 }
