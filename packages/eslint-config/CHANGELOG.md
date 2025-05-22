@@ -1,5 +1,12 @@
 # @channel.io/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- 97df4df: - Fix curly rule to properly work with Prettier configurations
+  - Add unused-imports plugin for automatic detection and removal of unused imports
+
 ## 2.1.0
 
 ### Minor Changes
