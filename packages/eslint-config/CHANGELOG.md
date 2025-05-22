@@ -1,5 +1,11 @@
 # @channel.io/eslint-config
 
+## 2.3.0
+
+### Minor Changes
+
+- a747a90: Apply `@rushstack/eslint-patch` to resolve ESLint plugin dependencies without requiring users to install them directly
+
 ## 2.2.0
 
 ### Minor Changes
