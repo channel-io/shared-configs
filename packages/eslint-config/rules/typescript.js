@@ -9,7 +9,7 @@ module.exports = {
         // typescript-estree and prints a warning by default
         suppressDeprecatedPropertyWarnings: true,
       },
-      plugins: ['@typescript-eslint'],
+      plugins: ['@typescript-eslint', 'unused-imports'],
       rules: {
         '@typescript-eslint/consistent-type-imports': ['warn'],
         '@typescript-eslint/consistent-type-assertions': [

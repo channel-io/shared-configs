@@ -1,3 +1,5 @@
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
   parserOptions: {
     sourceType: 'module',
@@ -5,7 +7,7 @@ module.exports = {
     ecmaFeatures: { impliedStrict: true, jsx: true },
   },
   env: { es2022: true, jest: true },
-  plugins: ['import', 'unused-imports'],
+  plugins: ['import'],
   rules: {
     'constructor-super': 'warn',
     eqeqeq: ['error', 'smart'],
