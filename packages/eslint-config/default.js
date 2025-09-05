@@ -4,13 +4,4 @@ const base = require('./rules/base.js')
 const typescript = require('./rules/typescript.js')
 const prettier = require('./rules/prettier.js')
 
-module.exports = defineConfig([
-  ...base,
-  ...typescript,
-  ...prettier,
-  {
-    rules: {
-      curly: ['error', 'all'],
-    },
-  },
-])
+module.exports = defineConfig([...base, ...typescript, ...prettier])
