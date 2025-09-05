@@ -1,7 +1,3 @@
 const { defineConfig } = require('eslint/config')
 
-module.exports = defineConfig([
-  {
-    extends: './node.js',
-  },
-])
+module.exports = defineConfig(require('./node.js'))
