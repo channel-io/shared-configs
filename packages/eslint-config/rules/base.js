@@ -18,9 +18,8 @@ module.exports = defineConfig([
         },
       },
 
-      globals: {
-        ...globals.jest,
-      },
+      // 전역 테스트 심볼은 테스트 전용 블록에서 한정
+      globals: {},
     },
 
     plugins: {
@@ -207,6 +206,14 @@ module.exports = defineConfig([
 
       'import/no-duplicates': 'error',
       curly: ['error', 'all'],
+    },
+  },
+  {
+    files: ['**/*.{test,spec}.{js,jsx,ts,tsx}', '**/__tests__/**'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
     },
   },
 ])
