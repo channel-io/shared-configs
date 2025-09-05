@@ -16,8 +16,6 @@ module.exports = defineConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
-        window: true,
-        fetch: true,
       },
     },
     rules: {
