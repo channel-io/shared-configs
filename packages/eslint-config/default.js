@@ -1,4 +1,7 @@
-module.exports = {
-  extends: ['./rules/base.js', './rules/typescript.js', './rules/prettier.js'],
-  rules: { curly: ['error', 'all'] },
-}
+const { defineConfig } = require('eslint/config')
+
+const base = require('./rules/base.js')
+const typescript = require('./rules/typescript.js')
+const prettier = require('./rules/prettier.js')
+
+module.exports = defineConfig([...base, ...typescript, ...prettier])
