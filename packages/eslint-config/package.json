@@ -1,9 +1,8 @@
 {
   "name": "@channel.io/eslint-config",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0",
   "publishConfig": {
-    "access": "public",
-    "tag": "alpha"
+    "access": "public"
   },
   "engines": {
     "node": ">=18.18 || >=20"
