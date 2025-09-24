@@ -1,124 +1,219 @@
-require('@rushstack/eslint-patch/modern-module-resolution')
+const { defineConfig } = require('eslint/config')
 
-module.exports = {
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 2022,
-    ecmaFeatures: { impliedStrict: true, jsx: true },
-  },
-  env: { es2022: true, jest: true },
-  plugins: ['import'],
-  rules: {
-    'constructor-super': 'warn',
-    eqeqeq: ['error', 'smart'],
-    'getter-return': 'warn',
-    'new-parens': 'warn',
-    'no-alert': 'off',
-    'no-case-declarations': 'warn',
-    'no-compare-neg-zero': 'error',
-    'no-cond-assign': 'warn',
-    'no-const-assign': 'error',
-    'no-constant-condition': ['warn', { checkLoops: false }],
-    'no-control-regex': 'off',
-    'no-delete-var': 'error',
-    'no-dupe-args': 'error',
-    'no-dupe-class-members': 'error',
-    'no-dupe-keys': 'error',
-    'no-duplicate-case': 'error',
-    'no-empty-character-class': 'warn',
-    'no-empty-pattern': 'warn',
-    'no-eval': 'warn',
-    'no-ex-assign': 'warn',
-    'no-extend-native': 'warn',
-    'no-extra-bind': 'warn',
-    'no-extra-boolean-cast': 'warn',
-    'no-fallthrough': 'warn',
-    'no-func-assign': 'error',
-    'no-global-assign': 'warn',
-    'no-implied-eval': 'warn',
-    'no-inner-declarations': 'warn',
-    'no-invalid-regexp': 'error',
-    'no-irregular-whitespace': 'warn',
-    'no-iterator': 'warn',
-    'no-label-var': 'warn',
-    'no-labels': ['warn', { allowLoop: true, allowSwitch: true }],
-    'no-lone-blocks': 'warn',
-    'no-multi-assign': 'warn',
-    'no-new': 'warn',
-    'no-new-func': 'warn',
-    'no-new-object': 'warn',
-    'no-new-symbol': 'error',
-    'no-obj-calls': 'warn',
-    'no-octal': 'warn',
-    'no-octal-escape': 'warn',
-    'no-proto': 'warn',
-    'no-redeclare': 'warn',
-    'no-return-assign': 'warn',
-    'no-script-url': 'warn',
-    'no-self-assign': 'warn',
-    'no-self-compare': 'warn',
-    'no-sequences': 'warn',
-    'no-shadow-restricted-names': 'warn',
-    'no-sparse-arrays': 'warn',
-    'no-this-before-super': 'warn',
-    'no-throw-literal': 'warn',
-    'no-undef': 'error',
-    'no-unneeded-ternary': 'warn',
-    'no-unreachable': 'warn',
-    'no-unsafe-negation': 'warn',
-    'no-unused-expressions': [
-      'warn',
-      { allowShortCircuit: true, enforceForJSX: true },
-    ],
-    'no-unused-labels': 'warn',
-    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
-    'no-useless-computed-key': 'warn',
-    'no-useless-concat': 'warn',
-    'no-useless-constructor': 'warn',
-    'no-useless-escape': 'warn',
-    'no-useless-rename': 'warn',
-    'no-useless-return': 'warn',
-    'no-var': 'warn',
-    'no-void': 'warn',
-    'no-with': 'error',
-    'object-shorthand': [
-      'error',
-      'always',
-      { ignoreConstructors: false, avoidQuotes: true },
-    ],
-    'prefer-const': [
-      'warn',
-      { destructuring: 'all', ignoreReadBeforeAssign: true },
-    ],
-    'prefer-promise-reject-errors': 'warn',
-    'prefer-rest-params': 'warn',
-    'prefer-spread': 'warn',
-    'unicode-bom': ['warn', 'never'],
-    'use-isnan': 'error',
-    'valid-typeof': 'error',
-    yoda: ['warn', 'never', { exceptRange: true }],
+const globals = require('globals')
+const _import = require('eslint-plugin-import')
 
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      { js: 'never', mjs: 'never', jsx: 'never', ts: 'never', tsx: 'never' },
-    ],
-    'no-restricted-imports': ['error', { paths: ['src'], patterns: ['../*'] }],
-    'no-restricted-modules': ['error', { paths: ['src'], patterns: ['../*'] }],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'external',
-          'builtin',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
+const { fixupPluginRules } = require('@eslint/compat')
+
+module.exports = defineConfig([
+  {
+    languageOptions: {
+      sourceType: 'module',
+      ecmaVersion: 2022,
+
+      parserOptions: {
+        ecmaFeatures: {
+          impliedStrict: true,
+          jsx: true,
+        },
       },
-    ],
-    'import/no-duplicates': 'error',
-    curly: ['error', 'all'],
+
+      // 전역 테스트 심볼은 테스트 전용 블록에서 한정
+      globals: {},
+    },
+
+    plugins: {
+      import: fixupPluginRules({
+        rules: _import.rules,
+        configs: undefined, // configs를 제거하여 circular reference 방지
+      }),
+    },
+
+    rules: {
+      'constructor-super': 'warn',
+      eqeqeq: ['error', 'smart'],
+      'getter-return': 'warn',
+      'new-parens': 'warn',
+      'no-alert': 'off',
+      'no-case-declarations': 'warn',
+      'no-compare-neg-zero': 'error',
+      'no-cond-assign': 'warn',
+      'no-const-assign': 'error',
+
+      'no-constant-condition': [
+        'warn',
+        {
+          checkLoops: false,
+        },
+      ],
+
+      'no-control-regex': 'off',
+      'no-delete-var': 'error',
+      'no-dupe-args': 'error',
+      'no-dupe-class-members': 'error',
+      'no-dupe-keys': 'error',
+      'no-duplicate-case': 'error',
+      'no-empty-character-class': 'warn',
+      'no-empty-pattern': 'warn',
+      'no-eval': 'warn',
+      'no-ex-assign': 'warn',
+      'no-extend-native': 'warn',
+      'no-extra-bind': 'warn',
+      'no-extra-boolean-cast': 'warn',
+      'no-fallthrough': 'warn',
+      'no-func-assign': 'error',
+      'no-global-assign': 'warn',
+      'no-implied-eval': 'warn',
+      'no-inner-declarations': 'warn',
+      'no-invalid-regexp': 'error',
+      'no-irregular-whitespace': 'warn',
+      'no-iterator': 'warn',
+      'no-label-var': 'warn',
+
+      'no-labels': [
+        'warn',
+        {
+          allowLoop: true,
+          allowSwitch: true,
+        },
+      ],
+
+      'no-lone-blocks': 'warn',
+      'no-multi-assign': 'warn',
+      'no-new': 'warn',
+      'no-new-func': 'warn',
+      'no-new-object': 'warn',
+      'no-new-symbol': 'error',
+      'no-obj-calls': 'warn',
+      'no-octal': 'warn',
+      'no-octal-escape': 'warn',
+      'no-proto': 'warn',
+      'no-redeclare': 'warn',
+      'no-return-assign': 'warn',
+      'no-script-url': 'warn',
+      'no-self-assign': 'warn',
+      'no-self-compare': 'warn',
+      'no-sequences': 'warn',
+      'no-shadow-restricted-names': 'warn',
+      'no-sparse-arrays': 'warn',
+      'no-this-before-super': 'warn',
+      'no-throw-literal': 'warn',
+      'no-undef': 'error',
+      'no-unneeded-ternary': 'warn',
+      'no-unreachable': 'warn',
+      'no-unsafe-negation': 'warn',
+
+      'no-unused-expressions': [
+        'warn',
+        {
+          allowShortCircuit: true,
+          enforceForJSX: true,
+        },
+      ],
+
+      'no-unused-labels': 'warn',
+
+      'no-unused-vars': [
+        'error',
+        {
+          ignoreRestSiblings: true,
+        },
+      ],
+
+      'no-useless-computed-key': 'warn',
+      'no-useless-concat': 'warn',
+      'no-useless-constructor': 'warn',
+      'no-useless-escape': 'warn',
+      'no-useless-rename': 'warn',
+      'no-useless-return': 'warn',
+      'no-var': 'warn',
+      'no-void': 'warn',
+      'no-with': 'error',
+
+      'object-shorthand': [
+        'error',
+        'always',
+        {
+          ignoreConstructors: false,
+          avoidQuotes: true,
+        },
+      ],
+
+      'prefer-const': [
+        'warn',
+        {
+          destructuring: 'all',
+          ignoreReadBeforeAssign: true,
+        },
+      ],
+
+      'prefer-promise-reject-errors': 'warn',
+      'prefer-rest-params': 'warn',
+      'prefer-spread': 'warn',
+      'unicode-bom': ['warn', 'never'],
+      'use-isnan': 'error',
+      'valid-typeof': 'error',
+
+      yoda: [
+        'warn',
+        'never',
+        {
+          exceptRange: true,
+        },
+      ],
+
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          mjs: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
+
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: ['src'],
+          patterns: ['../*'],
+        },
+      ],
+
+      'no-restricted-modules': [
+        'error',
+        {
+          paths: ['src'],
+          patterns: ['../*'],
+        },
+      ],
+
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'external',
+            'builtin',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
+        },
+      ],
+
+      'import/no-duplicates': 'error',
+      curly: ['error', 'all'],
+    },
   },
-}
+  {
+    files: ['**/*.{test,spec}.{js,jsx,ts,tsx}', '**/__tests__/**'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
+  },
+])
