@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+
 jobs:
   release:
     name: Release
@@ -19,6 +22,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: yarn
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: yarn
@@ -33,4 +37,3 @@ jobs:
           title: 'ci(changesets): version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
