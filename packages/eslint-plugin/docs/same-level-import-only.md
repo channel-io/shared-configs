@@ -21,7 +21,7 @@
 }
 ```
 
-### `patterns` (required)
+### `patterns`
 
 glob 패턴 배열. 이 패턴에 매칭되는 파일에만 룰이 적용됩니다.
 

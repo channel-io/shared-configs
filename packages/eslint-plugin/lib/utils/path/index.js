@@ -2,7 +2,6 @@ const micromatch = require('micromatch')
 const { loadConfig } = require('tsconfig-paths/lib/config-loader')
 const { createMatchPath } = require('tsconfig-paths/lib/match-path-sync')
 const path = require('node:path')
-const { INDEX_FILE_NAME } = require('./const')
 
 const DEFAULT_EXTENSIONS = ['.js', '.ts', '.jsx', '.tsx']
 
@@ -77,10 +76,6 @@ const getSegments = ({ absolutePath }) => {
   return absolutePath.split(path.sep)
 }
 
-const isIndexFile = ({ absolutePath }) => {
-  const filename = path.basename(absolutePath)
-  return filename.startsWith(INDEX_FILE_NAME)
-}
 
 const isSameDirectory = ({ absolutePath1, absolutePath2 }) => {
   return path.dirname(absolutePath1) === path.dirname(absolutePath2)

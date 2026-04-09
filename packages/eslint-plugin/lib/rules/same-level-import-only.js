@@ -29,13 +29,10 @@ module.exports = {
             type: 'array',
             items: { type: 'string' },
           },
-        },
-        additionalProperties: false,
-      },
-      {
-        type: 'object',
-        properties: {
-          extensions: { type: 'array', items: { type: 'string' } },
+          extensions: {
+            type: 'array',
+            items: { type: 'string' },
+          },
         },
         additionalProperties: false,
       },
