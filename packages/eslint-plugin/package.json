@@ -21,6 +21,10 @@
     "channelio"
   ],
   "license": "MIT",
+  "dependencies": {
+    "micromatch": "^4.0.8",
+    "tsconfig-paths": "^4.2.0"
+  },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.57.1",

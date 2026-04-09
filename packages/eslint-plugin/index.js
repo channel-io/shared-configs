@@ -5,6 +5,7 @@ const pascalCaseEnumName = require('./lib/rules/pascal-case-enum-name')
 const pascalCaseInterfaceName = require('./lib/rules/pascal-case-interface-name')
 const pascalCaseTypeName = require('./lib/rules/pascal-case-type-name')
 const preventDestructuredArgumentCallbackInIntersectionObserver = require('./lib/rules/prevent-destructured-argument-callback-in-intersection-observer')
+const sameLevelImportOnly = require('./lib/rules/same-level-import-only')
 
 module.exports = {
   rules: {
@@ -16,5 +17,6 @@ module.exports = {
     'pascal-case-type-name': pascalCaseTypeName,
     'prevent-destructured-argument-callback-in-intersection-observer':
       preventDestructuredArgumentCallbackInIntersectionObserver,
+    'same-level-import-only': sameLevelImportOnly,
   },
 }
