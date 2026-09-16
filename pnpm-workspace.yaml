@@ -1,0 +1,18 @@
+packages:
+  - 'packages/*'
+
+# 멤버 상호·루트 참조를 semver 그대로 두고 링크로 해석한다.
+# 이 레포는 publish 대상(@channel.io/* 5개, changesets)이라 `workspace:*` 프로토콜을 쓰지 않는다.
+linkWorkspacePackages: true
+
+# pnpm 11 기본값이지만 명시해 파일 가시성과 기본값 회귀 방어를 둔다.
+strictDepBuilds: true
+
+# as-is(yarn berry 4.0.2) 컨테이너 스냅샷 build-scripts.tsv 의 `실행` 5행이 정본이다.
+# husky(install) · husky(postinstall) · pre-commit(install) · spawn-sync(postinstall) · unrs-resolver(postinstall)
+# 로컬 install 목록으로 정하지 않는다 — 플랫폼별 optional 이 빠져 목록이 줄어든다.
+allowBuilds:
+  husky: true
+  pre-commit: true
+  spawn-sync: true
+  unrs-resolver: true
