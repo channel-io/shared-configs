@@ -12,7 +12,7 @@ strictDepBuilds: true
 # husky(install) · husky(postinstall) · pre-commit(install) · spawn-sync(postinstall) · unrs-resolver(postinstall)
 # 로컬 install 목록으로 정하지 않는다 — 플랫폼별 optional 이 빠져 목록이 줄어든다.
 allowBuilds:
-  husky: true
-  pre-commit: true
-  spawn-sync: true
-  unrs-resolver: true
+  'husky@4.3.8': true
+  'pre-commit@1.2.2': true
+  'spawn-sync@1.0.15': true
+  'unrs-resolver@1.7.2': true
