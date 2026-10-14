@@ -8,7 +8,7 @@
   "main": "default.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "yarn eslint ."
+    "lint": "pnpm eslint ."
   },
   "author": "Channel Corp.",
   "bugs": {
